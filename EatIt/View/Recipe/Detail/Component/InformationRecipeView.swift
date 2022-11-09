@@ -18,7 +18,7 @@ struct InformationRecipeView: View {
             }
             HStack {
                 IconsExtractedView(systemName: "star", indicator: recipe.level.rawValue)
-                IconsExtractedView(systemName: "bookmark", indicator: recipe.diet)
+                IconsExtractedView(systemName: "bookmark", indicator: recipe.diet.rawValue)
                 IconsExtractedView(systemName: "leaf", indicator: recipe.season.rawValue)
                 IconsExtractedView(systemName: "eurosign", indicator: recipe.cost.rawValue)
             }

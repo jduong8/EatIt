@@ -1,5 +1,5 @@
 //
-//  CategoryPickerView.swift
+//  CategoryPickerFilterView.swift
 //  EatIt
 //
 //  Created by Jonathan Duong on 08/11/2022.
@@ -7,10 +7,12 @@
 
 import SwiftUI
 
-struct CategoryPickerView: View {
+struct CategoryPickerFilterView: View {
     @State private var CategorySearch = 0
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+            SectionTitleView(title: "Catégories", imageName: "menucard")
+//            sectionTitle(title: "Catégories", imageName: "menucard")
             Picker("search parameters", selection: $CategorySearch) {
                 Text("Entrées").tag(0)
                 Text("Plats").tag(1)
@@ -22,8 +24,8 @@ struct CategoryPickerView: View {
     }
 }
 
-struct CategoryPickerView_Previews: PreviewProvider {
+struct CategoryPickerFilterView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryPickerView()
+        CategoryPickerFilterView()
     }
 }

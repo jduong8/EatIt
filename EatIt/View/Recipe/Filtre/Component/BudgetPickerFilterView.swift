@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct BudgetPickerView: View {
+struct BudgetPickerFilterView: View {
     @State private var BudgetSearch = 0
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+            SectionTitleView(title: "Budgets", imageName: "eurosign")
             Picker("search parameters", selection: $BudgetSearch) {
                 Text("Fin de mois").tag(0)
                 Text("Au quotidien").tag(1)
@@ -19,11 +20,5 @@ struct BudgetPickerView: View {
             .pickerStyle(.segmented)
             .padding(.horizontal,15)
         }
-    }
-}
-
-struct BudgetPickerView_Previews: PreviewProvider {
-    static var previews: some View {
-        BudgetPickerView()
     }
 }

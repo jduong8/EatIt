@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HeaderProfileView: View {
     @State private var personCount: Int = 1
-    @Binding var myDiet: myDiet
+    @Binding var myDiet: Diet
     let user: User
     var body: some View {
         VStack {

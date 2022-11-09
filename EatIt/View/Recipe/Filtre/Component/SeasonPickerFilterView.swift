@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct SeasonPickerView: View {
+struct SeasonPickerFilterView: View {
     @State private var SeasonSearch = 0
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+            SectionTitleView(title: "Saisons", imageName: "sun.dust.fill")
             Picker("search parameters", selection: $SeasonSearch) {
                 Text("Printemps").tag(0)
                 Text("Eté").tag(1)
@@ -24,8 +25,8 @@ struct SeasonPickerView: View {
     }
 }
 
-struct SeasonPickerView_Previews: PreviewProvider {
+struct SeasonPickerFilterView_Previews: PreviewProvider {
     static var previews: some View {
-        SeasonPickerView()
+        SeasonPickerFilterView()
     }
 }

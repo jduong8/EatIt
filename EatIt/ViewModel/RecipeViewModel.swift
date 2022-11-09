@@ -11,6 +11,7 @@ class RecipeViewModel: ObservableObject {
     @Published var recipe: Recipe?
     @Published var recipes: Recipes?
     @Published var user: User?
+    @Published  var selectedImage: Image? = nil
     
     let endPoint = "https://server-eat-it-app.herokuapp.com/recipes/"
 }

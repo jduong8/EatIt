@@ -13,7 +13,7 @@ struct ParamsProfileView: View {
     @State private var name: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
-    @Binding var selectedDiet: myDiet
+    @Binding var selectedDiet: Diet
         
     var body: some View {
         NavigationView {

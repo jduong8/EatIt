@@ -13,7 +13,7 @@ struct Users: Codable {
 struct User: Codable, Identifiable {
     let id: Int
     let name: String
-    let diet: myDiet
+    let diet: Diet
     let email: String
     let password: String
     let picture: String?
@@ -21,16 +21,4 @@ struct User: Codable, Identifiable {
     
     
     static let userExample = User(id: 1, name: "Valentin", diet: .sansGluten, email: "valentin@eatit.com", password: "password", picture: "exampleProfile")
-}
-
-enum myDiet: String, CaseIterable, Identifiable, Codable {
-    case vegan = "Vegan"
-    case vegetarien = "Vegetarien"
-    case sansLactose = "Sans lactose"
-    case sansGluten = "Sans gluten"
-    case sansPorc = "Sans porc"
-    case sansPoisson = "Sans poisson"
-    case tout = "Tout"
-    
-    var id: String { self.rawValue }
 }

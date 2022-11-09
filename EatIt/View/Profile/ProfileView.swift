@@ -11,7 +11,7 @@ struct ProfileView: View {
     
     @State private var isPresented: Bool = false
     @State private var isSheet: Bool = false
-    @State var myDiet: myDiet = .sansGluten
+    @State var myDiet: Diet = .sansGluten
     
     var body: some View {
         NavigationView {

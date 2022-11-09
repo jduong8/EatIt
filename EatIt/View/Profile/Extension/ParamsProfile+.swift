@@ -34,7 +34,7 @@ extension ParamsProfileView {
     func myPicketDiet(header: String) -> some View {
         Section {
             Picker(selection: $selectedDiet) {
-                ForEach(myDiet.allCases) { tag in
+                ForEach(Diet.allCases) { tag in
                     Text(tag.rawValue.uppercased())
                         .tag(tag)
                 }
