@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct Step: Codable {
+struct Step: Codable, Identifiable {
+    let id: Int
     let number: String
     let description: String
     let recipeId: Int

@@ -7,10 +7,12 @@
 
 import SwiftUI
 
-struct Ingredient: Codable {
+struct Ingredient: Codable, Identifiable {
+    let id: Int
     let name: String
     let unit: String
     let image: String
+    let recipeIngredient: RecipeIngredient
 }
 
 struct Ingredients: Codable {

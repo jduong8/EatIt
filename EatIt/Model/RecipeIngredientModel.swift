@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RecipeIngredient: Codable {
+    let id: Int
     let amount: Double
     let recipeId: Int
     let ingredientId: Int

@@ -47,6 +47,14 @@
 		F4433CFE291A4F0300272660 /* SeasonPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433CFD291A4F0300272660 /* SeasonPickerView.swift */; };
 		F4433D00291BA81C00272660 /* FavorisManager+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433CFF291BA81C00272660 /* FavorisManager+.swift */; };
 		F4433D02291BAE5C00272660 /* StepViewModel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433D01291BAE5C00272660 /* StepViewModel+.swift */; };
+		F4433D04291BB49E00272660 /* AddRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433D03291BB49E00272660 /* AddRecipesView.swift */; };
+		F4433D08291BB6EC00272660 /* AddRecipeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433D07291BB6EC00272660 /* AddRecipeButtonView.swift */; };
+		F4433D0A291BBF9F00272660 /* AddRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433D09291BBF9F00272660 /* AddRecipeView.swift */; };
+		F4433D0D291BE1B700272660 /* IconsExtractedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433D0C291BE1B700272660 /* IconsExtractedView.swift */; };
+		F4433D0F291BE22900272660 /* HeaderRecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433D0E291BE22900272660 /* HeaderRecipeDetailView.swift */; };
+		F4433D11291BE31700272660 /* InformationRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433D10291BE31700272660 /* InformationRecipeView.swift */; };
+		F4433D13291BE40200272660 /* IngredientRecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433D12291BE40200272660 /* IngredientRecipeDetailView.swift */; };
+		F4433D15291BE49200272660 /* StepRecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433D14291BE49200272660 /* StepRecipeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +99,14 @@
 		F4433CFD291A4F0300272660 /* SeasonPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonPickerView.swift; sourceTree = "<group>"; };
 		F4433CFF291BA81C00272660 /* FavorisManager+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavorisManager+.swift"; sourceTree = "<group>"; };
 		F4433D01291BAE5C00272660 /* StepViewModel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StepViewModel+.swift"; sourceTree = "<group>"; };
+		F4433D03291BB49E00272660 /* AddRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipesView.swift; sourceTree = "<group>"; };
+		F4433D07291BB6EC00272660 /* AddRecipeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeButtonView.swift; sourceTree = "<group>"; };
+		F4433D09291BBF9F00272660 /* AddRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView.swift; sourceTree = "<group>"; };
+		F4433D0C291BE1B700272660 /* IconsExtractedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsExtractedView.swift; sourceTree = "<group>"; };
+		F4433D0E291BE22900272660 /* HeaderRecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderRecipeDetailView.swift; sourceTree = "<group>"; };
+		F4433D10291BE31700272660 /* InformationRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationRecipeView.swift; sourceTree = "<group>"; };
+		F4433D12291BE40200272660 /* IngredientRecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientRecipeDetailView.swift; sourceTree = "<group>"; };
+		F4433D14291BE49200272660 /* StepRecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepRecipeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +190,7 @@
 		F4433C93291558C500272660 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F4433D05291BB61100272660 /* AddRecipe */,
 				F4433CF3291A4A0100272660 /* Filtre */,
 				F4433CBD2919233300272660 /* Extension */,
 				F4433CA829156ED200272660 /* Recipe */,
@@ -206,6 +223,7 @@
 		F4433CA829156ED200272660 /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
+				F4433D0B291BE18900272660 /* Component */,
 				F4433CA929156EDF00272660 /* RecipeDetailView.swift */,
 				F4433CBE291923D300272660 /* RecipeCategoryView.swift */,
 			);
@@ -267,6 +285,36 @@
 				F4433CF9291A4E8D00272660 /* DifficultyPickerView.swift */,
 				F4433CFB291A4EA900272660 /* BudgetPickerView.swift */,
 				F4433CFD291A4F0300272660 /* SeasonPickerView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		F4433D05291BB61100272660 /* AddRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				F4433D06291BB62100272660 /* Component */,
+				F4433D03291BB49E00272660 /* AddRecipesView.swift */,
+			);
+			path = AddRecipe;
+			sourceTree = "<group>";
+		};
+		F4433D06291BB62100272660 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				F4433D07291BB6EC00272660 /* AddRecipeButtonView.swift */,
+				F4433D09291BBF9F00272660 /* AddRecipeView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		F4433D0B291BE18900272660 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				F4433D0C291BE1B700272660 /* IconsExtractedView.swift */,
+				F4433D0E291BE22900272660 /* HeaderRecipeDetailView.swift */,
+				F4433D10291BE31700272660 /* InformationRecipeView.swift */,
+				F4433D12291BE40200272660 /* IngredientRecipeDetailView.swift */,
+				F4433D14291BE49200272660 /* StepRecipeDetailView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -344,26 +392,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4433D13291BE40200272660 /* IngredientRecipeDetailView.swift in Sources */,
 				F4433CAE29169E3800272660 /* ParamsProfileView.swift in Sources */,
 				F4433CE4291954EF00272660 /* UserViewModel.swift in Sources */,
 				F4433CFA291A4E8D00272660 /* DifficultyPickerView.swift in Sources */,
 				F4433CB32919123100272660 /* Color+.swift in Sources */,
 				F4433C9F291560FC00272660 /* RecipeIngredientModel.swift in Sources */,
 				F4433CFC291A4EA900272660 /* BudgetPickerView.swift in Sources */,
+				F4433D08291BB6EC00272660 /* AddRecipeButtonView.swift in Sources */,
 				F4433CEA291957CD00272660 /* StepViewModel.swift in Sources */,
 				F4433CAC291699C100272660 /* ProfileView.swift in Sources */,
 				F4433CB129190E9200272660 /* ParamsProfile+.swift in Sources */,
+				F4433D0A291BBF9F00272660 /* AddRecipeView.swift in Sources */,
 				F4433C862915587F00272660 /* MasterView.swift in Sources */,
 				F4433CF22919628900272660 /* FavorisManager.swift in Sources */,
 				F4433CF5291A4A4500272660 /* FilterView.swift in Sources */,
 				F4433C842915587F00272660 /* EatItApp.swift in Sources */,
 				F4433CE62919551600272660 /* IngredientViewModel.swift in Sources */,
 				F4433C9B2915605F00272660 /* IngredientModel.swift in Sources */,
+				F4433D15291BE49200272660 /* StepRecipeDetailView.swift in Sources */,
 				F4433CC3291933DA00272660 /* RecipeViewModel.swift in Sources */,
+				F4433D11291BE31700272660 /* InformationRecipeView.swift in Sources */,
 				F4433CA52915626500272660 /* HeaderProfileView.swift in Sources */,
 				F4433C972915594A00272660 /* UserModel.swift in Sources */,
 				F4433C95291558D200272660 /* RecipeModel.swift in Sources */,
 				F4433CAA29156EDF00272660 /* RecipeDetailView.swift in Sources */,
+				F4433D0F291BE22900272660 /* HeaderRecipeDetailView.swift in Sources */,
 				F4433C992915604200272660 /* UtensilModel.swift in Sources */,
 				F4433CB52919211D00272660 /* FooterProfile+.swift in Sources */,
 				F4433CBF291923D300272660 /* RecipeCategoryView.swift in Sources */,
@@ -374,6 +428,8 @@
 				F4433CEE29195A3300272660 /* IngredientViewModel+.swift in Sources */,
 				F4433CA12915617800272660 /* RecipeUtensilModel.swift in Sources */,
 				F4433CE82919579D00272660 /* UtensilsViewModel.swift in Sources */,
+				F4433D0D291BE1B700272660 /* IconsExtractedView.swift in Sources */,
+				F4433D04291BB49E00272660 /* AddRecipesView.swift in Sources */,
 				F4433CC12919249E00272660 /* FavorisView.swift in Sources */,
 				F4433C9D2915608B00272660 /* StepModel.swift in Sources */,
 				F4433CF8291A4E5D00272660 /* CategoryPickerView.swift in Sources */,

@@ -11,6 +11,7 @@ struct Utensil: Identifiable, Codable {
     let id: Int
     let name: String
     let image: String
+    let recipeUtensil: RecipeUtensil
 }
 
 struct Utensils: Codable {
