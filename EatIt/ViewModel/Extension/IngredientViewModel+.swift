@@ -9,7 +9,7 @@ import SwiftUI
 
 extension IngredientViewModel {
     /*---------------- GetRequest for RECIPE ------------------*/
-    func getRecipe() async throws -> Ingredients {
+    func getIngredient() async throws -> Ingredients {
         guard let url = URL(string: "\(endPoint)index")
         else {
             fatalError("Missing URL")
@@ -29,14 +29,14 @@ extension IngredientViewModel {
     }
     
     /*---------------- PostRequest ------------------*/
-    func postRecipe(_: Ingredient) async throws -> Ingredient {
+    func postIngredient(_: Ingredient) async throws -> Ingredient {
         guard let url = URL(string: "\(endPoint)index")
         else {
             fatalError("Missing URL")
         }
         
         let body: [String: Any] = [
-            "name": ingredient?.name ?? "_",
+            "name": ingredient?.name ?? "",
             "unit": ingredient?.unit ?? "",
             "image": ingredient?.image ?? ""
         ]
@@ -55,7 +55,7 @@ extension IngredientViewModel {
     }
     
     /*---------------- PutRequest ------------------*/
-    func updateRecipe(id: Int, _: Ingredient) async throws -> Ingredient {
+    func updateIngredient(id: Int, _: Ingredient) async throws -> Ingredient {
         guard let url = URL(string: "\(endPoint)\(id)")
         else {
             fatalError("Missing URL")
@@ -82,7 +82,7 @@ extension IngredientViewModel {
     }
     
     /*---------------- DeleteRequest ------------------*/
-    func updateRecipe(id: Int) async throws -> User {
+    func updateIngredient(id: Int) async throws -> Ingredient {
         guard let url = URL(string: "\(endPoint)\(id)")
         else {
             fatalError("Missing URL")
@@ -94,8 +94,8 @@ extension IngredientViewModel {
         
         let (data, _) = try await URLSession.shared.data(for: urlRequest)
         let decoder = JSONDecoder()
-        let decodedUser = try decoder.decode(User.self, from: data)
+        let decodedIngredient = try decoder.decode(Ingredient.self, from: data)
         
-        return decodedUser
+        return decodedIngredient
     }
 }

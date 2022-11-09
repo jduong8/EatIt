@@ -1,15 +1,14 @@
 //
-//  UserViewModel+.swift
+//  StepViewModel+.swift
 //  EatIt
 //
-//  Created by Jonathan Duong on 07/11/2022.
+//  Created by Jonathan Duong on 09/11/2022.
 //
 
 import SwiftUI
 
-extension UserViewModel {
-    /*---------------- GetRequest for RECIPE ------------------*/
-    func getRecipe() async throws -> Users {
+extension StepViewModel {
+    func getStep() async throws -> Steps {
         guard let url = URL(string: "\(endPoint)index")
         else {
             fatalError("Missing URL")
@@ -23,24 +22,22 @@ extension UserViewModel {
             fatalError("Error while fetching data.")
         }
         let decoder = JSONDecoder()
-        let decodedUsers = try decoder.decode(Users.self, from: data)
+        let decodedSteps = try decoder.decode(Steps.self, from: data)
         
-        return decodedUsers
+        return decodedSteps
     }
     
     /*---------------- PostRequest ------------------*/
-    func postRecipe(_: User) async throws -> User {
+    func postStep(_: Step) async throws -> Step {
         guard let url = URL(string: "\(endPoint)index")
         else {
             fatalError("Missing URL")
         }
         
         let body: [String: Any] = [
-            "name": user?.name ?? "",
-            "diet": user?.diet ?? "",
-            "email": user?.email ?? "",
-            "password": user?.password ?? "",
-            "picture": user?.picture ?? ""
+            "recipeId": recipe.id,
+            "number": step?.number ?? "Step n°",
+            "description": step?.description ?? ""
         ]
         
         var urlRequest = URLRequest(url: url)
@@ -51,24 +48,22 @@ extension UserViewModel {
         let (data, _) = try await URLSession.shared.data(for: urlRequest)
         
         let decoder = JSONDecoder()
-        let decodedUser = try decoder.decode(User.self, from: data)
+        let decodedStep = try decoder.decode(Step.self, from: data)
         
-        return decodedUser
+        return decodedStep
     }
     
     /*---------------- PutRequest ------------------*/
-    func updateRecipe(id: Int, _: User) async throws -> User {
+    func updateStep(id: Int, _: Step) async throws -> Step {
         guard let url = URL(string: "\(endPoint)\(id)")
         else {
             fatalError("Missing URL")
         }
         
         let body: [String : Any] = [
-            "name": user?.name ?? "_",
-            "diet": user?.diet ?? "",
-            "email": user?.email ?? "",
-            "password": user?.password ?? "",
-            "picture": user?.picture ?? ""
+            "recipeId": recipe.id,
+            "number": step?.number ?? "Step n°",
+            "description": step?.description ?? ""
         ]
         
         var urlRequest = URLRequest(url: url)
@@ -79,13 +74,13 @@ extension UserViewModel {
         
         let (data, _) = try await URLSession.shared.data(for: urlRequest)
         let decoder = JSONDecoder()
-        let decodedUser = try decoder.decode(User.self, from: data)
+        let decodedStep = try decoder.decode(Step.self, from: data)
         
-        return decodedUser
+        return decodedStep
     }
     
     /*---------------- DeleteRequest ------------------*/
-    func updateRecipe(id: Int) async throws -> User {
+    func updateStep(id: Int) async throws -> Step {
         guard let url = URL(string: "\(endPoint)\(id)")
         else {
             fatalError("Missing URL")
@@ -97,8 +92,8 @@ extension UserViewModel {
         
         let (data, _) = try await URLSession.shared.data(for: urlRequest)
         let decoder = JSONDecoder()
-        let decodedUser = try decoder.decode(User.self, from: data)
+        let decodedStep = try decoder.decode(Step.self, from: data)
         
-        return decodedUser
+        return decodedStep
     }
 }

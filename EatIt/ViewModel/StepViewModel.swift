@@ -10,7 +10,14 @@ import SwiftUI
 class StepViewModel: ObservableObject {
     @Published var step: Step?
     @Published var steps: Steps?
+    let recipe: Recipe
     
-    let endPoint = "http://localhost:8000/steps/"
+    init(step: Step? = nil, steps: Steps? = nil, recipe: Recipe) {
+        self.step = step
+        self.steps = steps
+        self.recipe = recipe
+    }
+    
+    let endPoint = "https://server-eat-it-app.herokuapp.com/steps/"
 }
 

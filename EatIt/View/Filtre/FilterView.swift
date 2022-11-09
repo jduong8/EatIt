@@ -16,7 +16,7 @@ struct FilterView: View {
         NavigationView {
             ZStack {
                 Color.bgLightGreen
-                    .edgesIgnoringSafeArea(.all)
+                    .ignoresSafeArea()
                 
                 VStack (alignment: .leading) {
                     Text("")

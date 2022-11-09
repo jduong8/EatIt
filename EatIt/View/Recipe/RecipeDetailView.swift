@@ -9,22 +9,20 @@ import SwiftUI
 
 struct RecipeDetailView: View {
     
-    //    @StateObject var favorisManager = FavorisManager()
-    //    let recipe: Recipe
-    //    @State private var value = 2
-    //    let step = 1
-    //    let range = 1...9
+    @StateObject var favorisManager = FavorisManager()
+    let recipe: Recipe
+    @State private var value = 2
+    let step = 1
+    let range = 1...9
     
     var body: some View {
         Text("DetailView")
-    }
-}
 //        List {
 //            VStack {
 //                if let recipe = recipe.image {
 //                    Image(recipe)
 //                        .resizable()
-////                        .scaledToFit()
+//                    //                        .scaledToFit()
 //                        .scaledToFill()
 //                        .frame(maxWidth: .infinity, maxHeight: .infinity)
 //                        .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -39,31 +37,31 @@ struct RecipeDetailView: View {
 //                            .foregroundStyle(.secondary)
 //                    }
 //                }
-//                
+//
 //                HStack {
 //                    Text(recipe.name)
 //                        .font(.title.bold())
 //                }
 //                .padding()
-//                
+//
 //                HStack {
 //                    if !recipe.description.isEmpty {
 //                        Text(recipe.description)
 //                            .foregroundColor(.secondary)
 //                    }
 //                }
-//                
+//
 //            }
-//            
+//
 //            VStack(alignment: .center){
 //                HStack(alignment: .center) {
-//                    IconsExtractedView(systemName: "clock.arrow.circlepath", indicator: String(recipe.prepTime) + " min")
-//                    IconsExtractedView(systemName: "cooktop", indicator: String(recipe.cookingTime) + " min")
-//                    IconsExtractedView(systemName: "stopwatch", indicator: String(recipe.restTime) + " min")
+//                    IconsExtractedView(systemName: "clock.arrow.circlepath", indicator: String(recipe.preparationTime) + " min")
+//                    IconsExtractedView(systemName: "cooktop", indicator: String(recipe.cookingTime ?? "") + " min")
+//                    IconsExtractedView(systemName: "stopwatch", indicator: String(recipe.restTime ?? "") + " min")
 //                }
 //                HStack(alignment: .center) {
 //                    IconsExtractedView(systemName: "star", indicator: recipe.level.rawValue)
-//                    IconsExtractedView(systemName: "bookmark", indicator: recipe.diet.rawValue)
+//                    IconsExtractedView(systemName: "bookmark", indicator: recipe.diet)
 //                    IconsExtractedView(systemName: "leaf", indicator: recipe.season.rawValue)
 //                    IconsExtractedView(systemName: "eurosign", indicator: recipe.cost.rawValue)
 //                }
@@ -75,11 +73,11 @@ struct RecipeDetailView: View {
 //            .fontWeight(.bold)
 //            .multilineTextAlignment(.center)
 //            .background(
-//                    LinearGradient(
-//                        colors: [Color("darkGreen"), Color("mediumGreen"), Color("lightGreen")],
-//                        startPoint: .leading,
-//                        endPoint: .trailing
-//                    )
+//                LinearGradient(
+//                    colors: [Color("darkGreen"), Color("mediumGreen"), Color("lightGreen")],
+//                    startPoint: .leading,
+//                    endPoint: .trailing
+//                )
 //            )
 //
 //            if !recipe.ingredients.isEmpty {
@@ -111,7 +109,7 @@ struct RecipeDetailView: View {
 //                }
 //                .padding()
 //            }
-//            
+//
 //            if !recipe.step.isEmpty {
 //                VStack(alignment: .leading, spacing: 15) {
 //                    HStack {
@@ -135,47 +133,48 @@ struct RecipeDetailView: View {
 //        .listStyle(.plain)
 //        .background(Color("paleGreen"))
 //        .scrollContentBackground(.hidden)
-//        
+//
 //        .toolbar {
 //            ToolbarItem(placement: .navigationBarTrailing) {
 //                Button(action: {
-//                    favorisManager.deleteOrRemoveFavorite(recipe: recipe)
+////                    favorisManager.deleteOrRemoveFavorite(recipe: recipe)
 //                }, label: {
 //                    Label("Add to favorites", systemImage: favorisManager.favorites.contains(recipe) ? "heart.fill" : "heart")
-//                            .font(.title3)
+//                        .font(.title3)
 //                })
-////                .foregroundColor(.purple)
+//                //                .foregroundColor(.purple)
 //                .foregroundStyle(
 //                    LinearGradient(
 //                        colors: [Color("darkGreen"), Color("mediumGreen"), Color("lightGreen")],
-//                            startPoint: .leading,
-//                            endPoint: .trailing
+//                        startPoint: .leading,
+//                        endPoint: .trailing
 //                    )
 //                )
 //            }
 //        }
 //        .navigationBarTitleDisplayMode(.inline)
-////        .ignoresSafeArea()
-//    }
-//}
-//
-//struct RecipeDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NavigationView {
-//            RecipeDetailView(recipe: Recipe.recipeExample[0])
-//        }
-//    }
-//}
-//
-//struct IconsExtractedView: View {
-//    var systemName: String
-//    var indicator: String
-//    
-//    var body: some View {
-//        VStack(spacing: 5) {
-//            Image(systemName: systemName)
-//            Text(indicator)
-//        }
-//        .padding(10)
-//    }
-//}
+        //        .ignoresSafeArea()
+    }
+}
+
+
+struct RecipeDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            RecipeDetailView(recipe: Recipe.recipeExample[0])
+        }
+    }
+}
+
+struct IconsExtractedView: View {
+    var systemName: String
+    var indicator: String
+    
+    var body: some View {
+        VStack(spacing: 5) {
+            Image(systemName: systemName)
+            Text(indicator)
+        }
+        .padding(10)
+    }
+}

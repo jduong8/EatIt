@@ -31,7 +31,7 @@ struct ProfileView: View {
                     }
                 }
             }
-            .background(Color.bglightGreen)
+            .background(Color.bgLightGreen)
         }
     }
 }

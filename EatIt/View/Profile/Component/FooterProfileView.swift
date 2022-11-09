@@ -26,7 +26,7 @@ struct RecipeListButton: View {
         Button {
             self.isPresented.toggle()
         } label: {
-            NavigationLink(destination: RecipeDetailView()) {
+            NavigationLink(destination: RecipeDetailView(recipe: Recipe.recipeExample[0])) {
                 RoundedRectangle(cornerRadius: 8)
                     .frame(width: 160, height: 150)
             }

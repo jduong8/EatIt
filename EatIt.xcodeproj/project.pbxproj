@@ -45,6 +45,8 @@
 		F4433CFA291A4E8D00272660 /* DifficultyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433CF9291A4E8D00272660 /* DifficultyPickerView.swift */; };
 		F4433CFC291A4EA900272660 /* BudgetPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433CFB291A4EA900272660 /* BudgetPickerView.swift */; };
 		F4433CFE291A4F0300272660 /* SeasonPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433CFD291A4F0300272660 /* SeasonPickerView.swift */; };
+		F4433D00291BA81C00272660 /* FavorisManager+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433CFF291BA81C00272660 /* FavorisManager+.swift */; };
+		F4433D02291BAE5C00272660 /* StepViewModel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433D01291BAE5C00272660 /* StepViewModel+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +89,8 @@
 		F4433CF9291A4E8D00272660 /* DifficultyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyPickerView.swift; sourceTree = "<group>"; };
 		F4433CFB291A4EA900272660 /* BudgetPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetPickerView.swift; sourceTree = "<group>"; };
 		F4433CFD291A4F0300272660 /* SeasonPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonPickerView.swift; sourceTree = "<group>"; };
+		F4433CFF291BA81C00272660 /* FavorisManager+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavorisManager+.swift"; sourceTree = "<group>"; };
+		F4433D01291BAE5C00272660 /* StepViewModel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StepViewModel+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,7 @@
 				F4433CE52919551600272660 /* IngredientViewModel.swift */,
 				F4433CE72919579D00272660 /* UtensilsViewModel.swift */,
 				F4433CE9291957CD00272660 /* StepViewModel.swift */,
+				F4433CF12919628900272660 /* FavorisManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -185,7 +190,6 @@
 				F4433CA32915625600272660 /* Component */,
 				F4433CAB291699C100272660 /* ProfileView.swift */,
 				F4433CAD29169E3800272660 /* ParamsProfileView.swift */,
-				F4433CF12919628900272660 /* FavorisManager.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -241,6 +245,8 @@
 				F4433CC529193B0900272660 /* RecipeViewModel+.swift */,
 				F4433CEB291958E700272660 /* UserViewModel+.swift */,
 				F4433CED29195A3300272660 /* IngredientViewModel+.swift */,
+				F4433CFF291BA81C00272660 /* FavorisManager+.swift */,
+				F4433D01291BAE5C00272660 /* StepViewModel+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -364,12 +370,14 @@
 				F4433CFE291A4F0300272660 /* SeasonPickerView.swift in Sources */,
 				F4433CC629193B0900272660 /* RecipeViewModel+.swift in Sources */,
 				F4433CA72915669800272660 /* FooterProfileView.swift in Sources */,
+				F4433D02291BAE5C00272660 /* StepViewModel+.swift in Sources */,
 				F4433CEE29195A3300272660 /* IngredientViewModel+.swift in Sources */,
 				F4433CA12915617800272660 /* RecipeUtensilModel.swift in Sources */,
 				F4433CE82919579D00272660 /* UtensilsViewModel.swift in Sources */,
 				F4433CC12919249E00272660 /* FavorisView.swift in Sources */,
 				F4433C9D2915608B00272660 /* StepModel.swift in Sources */,
 				F4433CF8291A4E5D00272660 /* CategoryPickerView.swift in Sources */,
+				F4433D00291BA81C00272660 /* FavorisManager+.swift in Sources */,
 				F4433CEC291958E700272660 /* UserViewModel+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

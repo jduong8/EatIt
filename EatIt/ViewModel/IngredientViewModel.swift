@@ -11,6 +11,6 @@ class IngredientViewModel: ObservableObject {
     @Published var ingredient: Ingredient?
     @Published var ingredients: Ingredients?
     
-    let endPoint = "http://localhost:8000/ingredients/"
+    let endPoint = "https://server-eat-it-app.herokuapp.com/ingredients/"
 }
 

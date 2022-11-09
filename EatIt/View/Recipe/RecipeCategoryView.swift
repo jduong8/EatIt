@@ -12,24 +12,19 @@ struct RecipeCategoryView: View {
     // @State private var searchText = ""
     
     var body: some View {
-        
         ZStack{
-            Color.bgLightGreen.edgesIgnoringSafeArea(.all)
+            Color.bgLightGreen
+                .edgesIgnoringSafeArea(.all)
             ScrollView{
                 VStack{
-                    
                     HStack{
                         VStack {
-                         
                             Text("Ajouter ma propre \nRecette")
                                 .font(.title2)
                                 .foregroundColor(Color.white)
                                 .fontWeight(.semibold)
                                 .multilineTextAlignment(.center)
                                 .padding(.trailing)
-                            
-                            
-                            
                             Image(systemName:   "plus.circle")
                                 .padding(.horizontal)
                                 .bold()
@@ -42,21 +37,13 @@ struct RecipeCategoryView: View {
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 100.0, height: 100.0)
                             .cornerRadius(15)
-                        
-                        
-                        
                     } .padding(.vertical, 20.0)
                         .padding(.horizontal, 20.0)
                         .background(
-                            LinearGradient(
-                                colors: [Color("darkGreen"), Color("mediumGreen"), Color("lightGreen")],
-                                startPoint: .leading,
-                                endPoint: .trailing
-                            )
+                            LinearGradient(gradient: .gradientGreen, startPoint: .leading, endPoint: .trailing)
                         )
                         .cornerRadius(15)
                         .shadow(radius: 6)
-                    
                     HStack{
                         Text("Entrées")
                             .font(.largeTitle)
@@ -64,7 +51,6 @@ struct RecipeCategoryView: View {
                             .padding(.horizontal)
                         Spacer()
                     }
-                    
                     ScrollView(.horizontal){
                         HStack{
                             RecipeCell(recipe: Recipe.recipeExample[0])
@@ -79,7 +65,6 @@ struct RecipeCategoryView: View {
                             .padding(.horizontal)
                         Spacer()
                     }
-                    
                     ScrollView(.horizontal){
                         HStack{
                             RecipeCell(recipe: Recipe.recipeExample[0])
@@ -94,7 +79,6 @@ struct RecipeCategoryView: View {
                             .padding(.horizontal)
                         Spacer()
                     }
-                    
                     ScrollView(.horizontal){
                         HStack{
                             RecipeCell(recipe: Recipe.recipeExample[0])
@@ -119,6 +103,7 @@ struct RecipeCategoryView_Previews: PreviewProvider {
 }
 
 struct RecipeCell: View {
+    
     let recipe: Recipe
     
     var body: some View {
@@ -141,12 +126,4 @@ struct RecipeCell: View {
         
         
     }
-}
-extension Color {
-    
-    static let bgLightGreen = Color("bgLightGreen")
-}
-extension Color {
-    
-    static let bgDarkGreen = Color("bgDarkGreen")
 }

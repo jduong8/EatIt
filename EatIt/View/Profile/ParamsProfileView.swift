@@ -18,7 +18,7 @@ struct ParamsProfileView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.bglightGreen
+                Color.bgLightGreen
                     .ignoresSafeArea()
                     Form {
                         myTextField(title: "name", text: $name, header: "Ton nom")

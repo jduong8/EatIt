@@ -8,8 +8,16 @@
 import SwiftUI
 
 extension Color {
-    static let bglightGreen = Color("bgLightGreen")
+    static let bgLightGreen = Color("bgLightGreen")
     static let darkGreen = Color("darkGreen")
     static let mediumGreen = Color("mediumGreen")
     static let lightGreen = Color("lightGreen")
+}
+
+extension Gradient {
+    static let gradientGreen = Gradient(colors: [
+        Color.darkGreen,
+        Color.mediumGreen,
+        Color.lightGreen
+    ])
 }
