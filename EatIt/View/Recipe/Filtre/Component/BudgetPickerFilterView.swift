@@ -10,15 +10,17 @@ import SwiftUI
 struct BudgetPickerFilterView: View {
     @State private var BudgetSearch = 0
     var body: some View {
-        VStack(alignment: .leading) {
-            SectionTitleView(title: "Budgets", imageName: "eurosign")
+        HStack {
+            SectionTitleView(title: "Budgets", emoji: "💰")
+            Spacer()
             Picker("search parameters", selection: $BudgetSearch) {
                 Text("Fin de mois").tag(0)
                 Text("Au quotidien").tag(1)
                 Text("Festif").tag(2)
             }
-            .pickerStyle(.segmented)
-            .padding(.horizontal,15)
+            .pickerStyle(.automatic)
         }
+        .padding(.horizontal)
     }
 }
+

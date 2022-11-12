@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F42D4E74291FD65C0081F45F /* RecipeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42D4E73291FD65C0081F45F /* RecipeCellView.swift */; };
 		F4433C842915587F00272660 /* EatItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433C832915587F00272660 /* EatItApp.swift */; };
 		F4433C862915587F00272660 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433C852915587F00272660 /* MasterView.swift */; };
 		F4433C882915588000272660 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4433C872915588000272660 /* Assets.xcassets */; };
@@ -61,9 +62,11 @@
 		F4433D20291BFA7900272660 /* DietPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433D1F291BFA7900272660 /* DietPickerView.swift */; };
 		F4433D23291BFB0100272660 /* SectionTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433D22291BFB0100272660 /* SectionTitleView.swift */; };
 		F4433D25291BFCDD00272660 /* SeasonPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433D24291BFCDD00272660 /* SeasonPickerView.swift */; };
+		F4433D27291CFB1100272660 /* DietPickerFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4433D26291CFB1100272660 /* DietPickerFilterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F42D4E73291FD65C0081F45F /* RecipeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellView.swift; sourceTree = "<group>"; };
 		F4433C802915587F00272660 /* EatIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4433C832915587F00272660 /* EatItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatItApp.swift; sourceTree = "<group>"; };
 		F4433C852915587F00272660 /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
@@ -119,6 +122,7 @@
 		F4433D1F291BFA7900272660 /* DietPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPickerView.swift; sourceTree = "<group>"; };
 		F4433D22291BFB0100272660 /* SectionTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitleView.swift; sourceTree = "<group>"; };
 		F4433D24291BFCDD00272660 /* SeasonPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonPickerView.swift; sourceTree = "<group>"; };
+		F4433D26291CFB1100272660 /* DietPickerFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPickerFilterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +301,7 @@
 				F4433CF9291A4E8D00272660 /* DifficultyPickerFilterView.swift */,
 				F4433CFB291A4EA900272660 /* BudgetPickerFilterView.swift */,
 				F4433CFD291A4F0300272660 /* SeasonPickerFilterView.swift */,
+				F4433D26291CFB1100272660 /* DietPickerFilterView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -357,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				F4433D07291BB6EC00272660 /* AddRecipeButtonView.swift */,
+				F42D4E73291FD65C0081F45F /* RecipeCellView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -470,11 +476,13 @@
 				F4433CBF291923D300272660 /* RecipeCategoryView.swift in Sources */,
 				F4433CFE291A4F0300272660 /* SeasonPickerFilterView.swift in Sources */,
 				F4433CC629193B0900272660 /* RecipeViewModel+.swift in Sources */,
+				F4433D27291CFB1100272660 /* DietPickerFilterView.swift in Sources */,
 				F4433CA72915669800272660 /* FooterProfileView.swift in Sources */,
 				F4433D02291BAE5C00272660 /* StepViewModel+.swift in Sources */,
 				F4433CEE29195A3300272660 /* IngredientViewModel+.swift in Sources */,
 				F4433CA12915617800272660 /* RecipeUtensilModel.swift in Sources */,
 				F4433D1E291BFA6500272660 /* DifficultyPickerView.swift in Sources */,
+				F42D4E74291FD65C0081F45F /* RecipeCellView.swift in Sources */,
 				F4433CE82919579D00272660 /* UtensilsViewModel.swift in Sources */,
 				F4433D0D291BE1B700272660 /* IconsExtractedView.swift in Sources */,
 				F4433D04291BB49E00272660 /* AddRecipesView.swift in Sources */,

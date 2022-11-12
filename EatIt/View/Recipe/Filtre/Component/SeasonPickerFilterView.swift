@@ -10,8 +10,9 @@ import SwiftUI
 struct SeasonPickerFilterView: View {
     @State private var SeasonSearch = 0
     var body: some View {
-        VStack(alignment: .leading) {
-            SectionTitleView(title: "Saisons", imageName: "sun.dust.fill")
+        HStack {
+            SectionTitleView(title: "Saisons", emoji: "☀️")
+            Spacer()
             Picker("search parameters", selection: $SeasonSearch) {
                 Text("Printemps").tag(0)
                 Text("Eté").tag(1)
@@ -19,9 +20,9 @@ struct SeasonPickerFilterView: View {
                 Text("Hiver").tag(3)
                 Text("Toutes").tag(4)
             }
-            .pickerStyle(.segmented)
-            .padding(.horizontal,15)
+            .pickerStyle(.automatic)
         }
+        .padding(.horizontal)
     }
 }
 
@@ -30,3 +31,15 @@ struct SeasonPickerFilterView_Previews: PreviewProvider {
         SeasonPickerFilterView()
     }
 }
+
+/*        HStack {
+ SectionTitleView(title: "Catégories", imageName: "menucard")
+ Spacer()
+ Picker("search parameters", selection: $CategorySearch) {
+     Text("Entrées").tag(0)
+     Text("Plats").tag(1)
+     Text("Desserts").tag(2)
+ }
+ .pickerStyle(.automatic)
+}
+.padding(.horizontal)*/

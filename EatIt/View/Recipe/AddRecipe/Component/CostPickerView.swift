@@ -10,7 +10,7 @@ import SwiftUI
 struct CostPickerView: View {
     @Binding var costPicker: RecipeCost
     var body: some View {
-        Picker("Prix moyen", selection: $costPicker) {
+        Picker("Budget", selection: $costPicker) {
             ForEach(RecipeCost.allCases, id: \.self) {
                 Text($0.rawValue)
             }

@@ -8,10 +8,22 @@
 import SwiftUI
 
 struct FavorisView: View {
+    
+    let recipes: [Recipe] = []
+    
     var body: some View {
-        Text("FavorisView")
-            .bold()
-            .font(.largeTitle)
+        NavigationView {
+            ZStack {
+                Color.bgLightGreen
+                    .ignoresSafeArea()
+                VStack {
+                    if let _ = recipes.isEmpty {
+                        Text("Liste vide")
+                    }
+                }
+            }
+            .navigationTitle("Mes favoris")
+        }
     }
 }
 

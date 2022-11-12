@@ -71,7 +71,7 @@ enum RecipeDifficulty: String, CaseIterable, Codable {
 }
 
 enum RecipeSeason: String, CaseIterable, Codable {
-    case ete = "Ete"
+    case ete = "Eté"
     case pringtemps = "Pringtemps"
     case automne = "Automne"
     case hiver = "Hiver"
@@ -79,7 +79,7 @@ enum RecipeSeason: String, CaseIterable, Codable {
 
 enum Diet: String, CaseIterable, Identifiable, Codable {
     case vegan = "Vegan"
-    case vegetarien = "Vegetarien"
+    case vegetarien = "Végétarien"
     case sansLactose = "Sans lactose"
     case sansGluten = "Sans gluten"
     case sansPorc = "Sans porc"

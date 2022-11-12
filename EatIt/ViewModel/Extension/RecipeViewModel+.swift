@@ -36,8 +36,8 @@ extension RecipeViewModel {
         }
         
         let body: [String: Any] = [
-            "name": recipe?.name ?? "_",
-            "description": recipe?.description ?? "_",
+            "name": recipe?.name ?? "",
+            "description": recipe?.description ?? "",
             "image": recipe?.image ?? "",
             "video": recipe?.video ?? "none",
             "preparationTime": recipe?.preparationTime ?? "",
@@ -73,8 +73,8 @@ extension RecipeViewModel {
         }
         
         let body: [String : Any] = [
-            "name": recipe?.name ?? "_",
-            "description": recipe?.description ?? "_",
+            "name": recipe?.name ?? "",
+            "description": recipe?.description ?? "",
             "image": recipe?.image ?? "",
             "video": recipe?.video ?? "none",
             "preparationTime": recipe?.preparationTime ?? "",

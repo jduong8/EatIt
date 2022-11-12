@@ -10,6 +10,7 @@ import SwiftUI
 struct FilterView: View {
     
     @State private var searchText = ""
+    @State private var dietPicker: Diet = .tout
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -17,25 +18,15 @@ struct FilterView: View {
             ZStack {
                 Color.bgLightGreen
                     .ignoresSafeArea()
-                
-                VStack (alignment: .leading) {
-                    Text("")
-                        .searchable(text: $searchText, prompt: "Recette, catégorie, difficulté, budget, saison...")
-                        .bold()
-                        .foregroundColor(.black)
-                        .font(.system(size: 15))
-                        .padding(.leading)
-                    ScrollView(.vertical, showsIndicators: false) {
-                        VStack(alignment: .leading) {
-                            CategoryPickerFilterView()
-                            DifficultyPickerFilterView()
-                            BudgetPickerFilterView()
-                            SeasonPickerFilterView()
-                        }
-                    }
+                VStack(alignment: .leading) {
+                    CategoryPickerFilterView()
+                    DifficultyPickerFilterView()
+                    BudgetPickerFilterView()
+                    SeasonPickerFilterView()
+                    DietPickerFilterView(dietPicker: $dietPicker)
                 }
             }
-            .searchable(text: $searchText)
+            .searchable(text: $searchText, prompt: "Recette, catégorie, difficulté, budget, saison...")
             .navigationTitle("Recherche")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(

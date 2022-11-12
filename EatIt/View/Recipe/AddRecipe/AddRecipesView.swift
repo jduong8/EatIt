@@ -39,12 +39,13 @@ struct AddRecipesView: View {
     @State private var textFieldCookingTime = ""
     @State private var textFieldRestTime = ""
     @State private var textFieldIngredient = ""
-    @State private var ingredients = [Ingredient]()
     @State private var textFieldDescription = ""
     @State private var textFieldStep = ""
+    @State private var textFieldUtensil = ""
     @State private var steps = [Step]()
-    
-    //    Permet de baisser la vue
+    @State private var ingredients = [Ingredient]()
+    @State private var utensils = [Utensil]()
+
     @Environment(\.presentationMode) var presentationMode
     
     //    afficher/retirer clavier
@@ -56,8 +57,7 @@ struct AddRecipesView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                Form {
+                List {
                     Section {
                         if let selectedImage = recipeVM.selectedImage {
                             selectedImage
@@ -91,6 +91,8 @@ struct AddRecipesView: View {
                         TextField("Temps de cuisson", text: $textFieldCookingTime)
                         TextField("Temps de repos", text: $textFieldRestTime)
                         TextField("Ajouter un ingrédient", text: $textFieldIngredient)
+                        TextField("Ajouter un ustensil", text: $textFieldUtensil)
+                        TextField("Ajouter une étape", text: $textFieldStep)
                     }
                 }
                 .scrollContentBackground(.hidden)
@@ -102,7 +104,7 @@ struct AddRecipesView: View {
                         Button(action: {
                             presentationMode.wrappedValue.dismiss()
                         }, label: {
-                            Text("Submit")
+                            Text("Valider")
                                 .foregroundColor(.white)
                                 .padding(5)
                         })
@@ -123,7 +125,6 @@ struct AddRecipesView: View {
                         })
                     }
                 }
-            }
         }
     }
 }
